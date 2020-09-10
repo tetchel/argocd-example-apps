@@ -5,7 +5,7 @@ local params = import 'params.libsonnet';
       "apiVersion": "v1",
       "kind": "Service",
       "metadata": {
-         "name": params.name
+         "name": params.name + "-svc"
       },
       "spec": {
          "ports": [

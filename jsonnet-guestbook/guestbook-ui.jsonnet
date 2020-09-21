@@ -10,6 +10,7 @@ local params = import 'params.libsonnet';
       "spec": {
          "ports": [
             {
+               "name": "http",
                "port": params.servicePort,
                "targetPort": params.containerPort
             }
@@ -55,5 +56,20 @@ local params = import 'params.libsonnet';
             }
          }
       }
-   }
+   },
+   {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+         "name": "loser-pod"
+      },
+      "spec": {
+         "containers": [
+            {
+               "image": "k8s.gcr.io/echoserver:1.4",
+               "name": "loser-server"
+            }
+         ]
+      }
+   },
 ]

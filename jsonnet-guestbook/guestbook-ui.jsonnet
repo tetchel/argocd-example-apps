@@ -72,4 +72,8 @@ local params = import 'params.libsonnet';
          ]
       }
    },
+   {
+      apiVersion: "what",
+      kind: "something-fake"
+   },
 ]

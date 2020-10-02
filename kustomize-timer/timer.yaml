@@ -13,7 +13,7 @@ spec:
         # env:
       - name: timer-two
         image: docker.io/tetchel/timer:latest
-        command: [ "python", "/timer.py", "8" ]
+        command: [ "python", "/timer.py", "inf" ]
         tty: true
         # env:
       restartPolicy: Never

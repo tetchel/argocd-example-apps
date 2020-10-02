@@ -8,6 +8,9 @@ spec:
       containers:
       - name: timer
         image: docker.io/tetchel/timer:latest
-        command: [ "python", "/timer.py", "120" ]
+        command: [ "python", "/timer.py", "5" ]
+        env:
+          - name: PYTHONUNBUFFERED
+            value: "0"
       restartPolicy: Never
   backoffLimit: 4

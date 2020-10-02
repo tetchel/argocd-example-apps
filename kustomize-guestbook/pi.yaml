@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: pi
-        image: perl
-        command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(5000)"]
+        image: alpine:latest
+        command: [ "sh", "-c", "while true; do echo Its $(date); sleep 1; done" ]
       restartPolicy: Never
   backoffLimit: 4

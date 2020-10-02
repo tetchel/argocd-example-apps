@@ -16,5 +16,5 @@ spec:
         command: [ "python", "/timer.py", "inf" ]
         tty: true
         # env:
-      restartPolicy: Never
+      restartPolicy: Always
   backoffLimit: 4

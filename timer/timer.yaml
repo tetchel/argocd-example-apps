@@ -8,6 +8,10 @@ spec:
       containers:
       - name: timer
         image: docker.io/tetchel/timer:latest
-        command: [ "python", "/timer.py", "120" ]
+        # https://stackoverflow.com/questions/43969743/logs-in-kubernetes-pod-not-showing-up
+        env:
+        - name: PYTHONUNBUFFERED
+          value: "0"
+        command: [ "python", "/timer.py", "5" ]
       restartPolicy: Never
   backoffLimit: 4

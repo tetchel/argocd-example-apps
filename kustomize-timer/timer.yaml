@@ -10,8 +10,11 @@ spec:
         image: docker.io/tetchel/timer:latest
         command: [ "python", "/timer.py", "10" ]
         tty: true
-        env:
-          - name: PYTHONUNBUFFERED
-            value: "0"
+        # env:
+      - name: timer-two
+        image: docker.io/tetchel/timer:latest
+        command: [ "python", "/timer.py", "8" ]
+        tty: true
+        # env:
       restartPolicy: Never
   backoffLimit: 4

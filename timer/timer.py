@@ -28,3 +28,5 @@ else:
     print('Counting for {}s'.format(count))
     for i in range(count):
         print_time()
+
+print('Done counting!')

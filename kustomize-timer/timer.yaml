@@ -13,8 +13,13 @@ spec:
         # env:
       - name: timer-two
         image: docker.io/tetchel/timer:latest
+        command: [ "python", "/timer.py", "30" ]
+        tty: true
+        # env:
+      - name: timer-three
+        image: docker.io/tetchel/timer:latest
         command: [ "python", "/timer.py", "inf" ]
         tty: true
         # env:
-      restartPolicy: Always
+      restartPolicy: OnFailure
   backoffLimit: 4
